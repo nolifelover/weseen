@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fullname:</b>
+  <%= @issue.fullname %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @issue.mobile %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @issue.email %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @issue.place %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @issue.time %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @issue.detail %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @issue.status %>
+</p>
+
+<p>
+  <b>Flag:</b>
+  <%= @issue.flag %>
+</p>
+
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

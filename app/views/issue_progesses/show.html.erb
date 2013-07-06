@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Issue:</b>
+  <%= @issue_progess.issue %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @issue_progess.user %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @issue_progess.name %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @issue_progess.remark %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @issue_progess.status %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @issue_progess.level %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @issue_progess.price %>
+</p>
+
+<p>
+  <b>Check at:</b>
+  <%= @issue_progess.check_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_issue_progess_path(@issue_progess) %> |
+<%= link_to 'Back', issue_progesses_path %>

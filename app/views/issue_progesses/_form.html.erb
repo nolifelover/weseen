@@ -1,0 +1,18 @@
+<%= simple_form_for(@issue_progess) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :issue %>
+    <%= f.association :user %>
+    <%= f.input :name %>
+    <%= f.input :remark %>
+    <%= f.input :status %>
+    <%= f.input :level %>
+    <%= f.input :price %>
+    <%= f.input :check_at %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
