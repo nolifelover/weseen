@@ -1,0 +1,25 @@
+<h3><%=t :five_lastest_issue %></h3>
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th><%= t('issues.fullname') %></th>
+    <th><%= t('issues.place') %></th>
+    <th><%= t('issues.time') %></th>
+    <th><%= t('issues.detail') %></th>
+    <th><%= t('issues.status') %></th>
+    <th><%= t('issues.flag') %></th>
+    <th></th>
+  </tr>
+
+<% @issues.each do |issue| %>
+  <tr>
+    <td><%= issue.fullname %></td>
+    <td><%= issue.place %></td>
+    <td><%= issue.time %></td>
+    <td><%= issue.detail %></td>
+    <td><%= issue.status %></td>
+    <td><%= issue.flag %></td>
+    <td><%= link_to 'Show', issue %></td>
+    
+  </tr>
+<% end %>
+</table>

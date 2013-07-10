@@ -1,4 +1,31 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+
+<div>
+	<%= image_tag "/assets/icons/Graph@2x.png",:width=>"90",:height=>"90",:class => "pull-right" %>
+	<div style="margin-right:100px;">
+		<h2><%=t :welcome %></h2>
+		<p>
+			<%=t :application_description %>
+			<%=t :application_contact %>
+		</p>
+	</div>
+</div>
+
+<div class="span12 index_nav">
+	<%= link_to '<span class="fui-chat"></span>'.html_safe+' '+t(:have_issue),
+	{:controller => 'issues', :action => 'new'},
+	:class => "offset2 span3 btn btn-huge btn-block btn-primary"
+	%> 
+	<%= link_to '<span class="fui-list"></span>'.html_safe+' '+t(:all_issue),
+	{:controller => 'issues', :action => 'index'},
+	:class => "span3 btn btn-huge  btn-info"
+	%>
+</div>
+
+<hr/>
+<div>
+	<%= image_tag "/assets/icons/Clipboard@2x.png",:width=>"90",:height=>"90",:class => "pull-left" %>
+	<div style="margin-left:120px;">
+		<%= render 'issues' %>
+	</div>
+</div>
+<hr/>

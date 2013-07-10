@@ -1,3 +1,38 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.index_nav{
+	margin-top:0px;
+  margin-bottom:25px;
+}
+
+@font-face {
+  font-family: 'supermarket';
+  src: url('/assets/supermarket.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, form, fieldset, table, tr, td, img {
+    font: 100%/150% 'supermarket';
+}
+
+h1, h2, h3, h4, input, button, select, textarea, optgroup, option, label {
+    font-family: inherit;
+}
+
+label{
+  font-size:18px;
+}
+
+.navbar .nav > li > a{
+  font-size:16px;
+}
+
+.form-horizontal .control-label{
+  padding-top: 10px;
+}
+
+.btn{
+  font-size:18px;
+}

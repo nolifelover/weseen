@@ -1,26 +1,27 @@
-<%= link_to "WeSeen", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-      <%= link_to 'Admin', users_path %>
-      </li>
-    <% end %>
-  <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
-  <% end %>
-</ul>
+
+
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01">
+      </button>
+      <a href="#fakelink" class="brand fui-flat"></a>
+      <div class="nav-collapse collapse" id="nav-collapse-01">
+        <ul class="nav">
+          <li><%= link_to t(:home), {:controller => 'home', :action => 'index'}%></a></li>
+          <li><%= link_to t(:have_issue), {:controller => 'issues', :action => 'new'}%> </li>
+          <li><%= link_to t(:all_issue), {:controller => 'issues', :action => 'index'}%> </li>
+          
+          <li><%= link_to t(:about), {:controller => 'home', :action => 'index'}%> </li>
+        </ul> <!-- /nav -->
+       <!-- <ul class="nav pull-right">
+          <li><a href="#fakelink"><%=t :login %></a></li>
+          <li><a href="#fakelink"><%=t :register %></a></li>
+          
+        </ul> -->
+      </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

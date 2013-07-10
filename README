@@ -1,21 +1,21 @@
 WeSeen : Network Operations Center System
 ============================================
 
-WeSeen is web application for Network Operations Center System(NOC) to monitor and track issue from enduser.------------------------------------------------------------------------------------
+WeSeen is web application for Network Operations Center System(NOC) to monitor and track issue from end-user.
 
 Requirement
  - Ruby 1.9.3 or newer
  - Mysql database
 
 Installation
- - install ruby and rails (recomeded rvm) 
+ - install ruby and rails (rvm recomended) 
    curl -L https://get.rvm.io | bash -s stable --rails
    rvm install 1.9.3
    rvm use 1.9.3 --default
  - Install bundle gem 
    gem install bundle
  - Clone project from github
- - Go to root project and bundle to install dependenci gem
+ - Go to root project and bundle to install dependency gem
  - Set up database.yml & application.yml
  - Create and migrate database
    bundle exec rake db:setup

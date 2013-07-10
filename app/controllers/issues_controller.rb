@@ -10,6 +10,15 @@ class IssuesController < ApplicationController
     end
   end
 
+  def all
+    @issues = Issue.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @issues }
+    end
+  end
+
   # GET /issues/1
   # GET /issues/1.json
   def show

@@ -1,18 +1,18 @@
+
 <%= simple_form_for(@issue) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :fullname %>
-    <%= f.input :mobile %>
-    <%= f.input :email %>
-    <%= f.input :place %>
+  
+    <%= f.input :fullname , input_html: { class:'span3' }%>
+    <%= f.input :mobile, input_html: { class:'span3' } %>
+    <%= f.input :email, input_html: { class:'span3' } %>
+    <%= f.input :place , input_html: { class:'span3' } %>
     <%= f.input :time %>
-    <%= f.input :detail %>
-    <%= f.input :status %>
-    <%= f.input :flag %>
-  </div>
+    <%= f.input :detail, as: :text, input_html: { class:'span5', rows: 10,cols: 20 } %>
+    
+  
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions text-right">
+    <%= f.button :submit, class: 'span2 btn-inverse' %>
   </div>
 <% end %>
