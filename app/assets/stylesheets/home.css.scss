@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .index_nav{
 	margin-top:0px;
-  margin-bottom:25px;
 }
 
 @font-face {
@@ -19,6 +18,24 @@ html, body, form, fieldset, table, tr, td, img {
 
 h1, h2, h3, h4, input, button, select, textarea, optgroup, option, label {
     font-family: inherit;
+}
+
+td{
+  font-size:15px;
+}
+
+h1{
+  font-size:26px;
+}
+h2{
+  font-size:24px;
+}
+h3{
+  font-size:22px;
+}
+
+p{
+  font-size:16px;
 }
 
 label{
@@ -56,5 +73,42 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   background-color: #f3f4f5;
   margin-right: 18px;
   padding: 20px 0 150px 15px;
-  
+}
+
+.issue-about{
+  padding: 16px 45px 16px 30px;
+  text-shadow: none;
+  background-color: #f9f8f3;
+  border: 2px solid #ebece8;
+  font-size: 16px;
+  line-height: 1.53875em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.detail-popovers .popover {
+
+  display: block;
+  margin: 0 13px 0 -3px;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  z-index: 110;
+}
+
+.detail-popovers .popover-title{
+  background-color: #3498DB;
+}
+
+.detail-popovers .btn {
+  text-align: right;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+
+.btn-group.select {
+margin-left: 0px;
+margin-bottom: 0px;
 }

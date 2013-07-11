@@ -1,72 +1,55 @@
 <h1><%=t ('show') %></h1>
 
-<p id="notice"><%= notice %></p>
-
-<div class="span12">
-  <div class="tabbable tabs-left">
-    <ul class="nav nav-tabs nav-append-content">
-      <li class="active"><a href="#tab_issue"><%= t('issue.label')%></a></li>
-      <li><a href="#tab_issue_progress"><%= t('issue.progress.label')%></a></li>
-    </ul> <!-- /tabs -->
-    <div class="tab-content">
-      <div class="tab-pane active" id="tab_issue">
-        
-        <p>
-          <b>Fullname:</b>
-          <%= @issue.fullname %>
-        </p>
-
-        <p>
-          <b>Mobile:</b>
-          <%= @issue.mobile %>
-        </p>
-
-        <p>
-          <b>Email:</b>
-          <%= @issue.email %>
-        </p>
-
-        <p>
-          <b>Place:</b>
-          <%= @issue.place %>
-        </p>
-
-        <p>
-          <b>Time:</b>
-          <%= @issue.time %>
-        </p>
-
-        <p>
-          <b>Detail:</b>
-          <%= @issue.detail %>
-        </p>
-
-        <p>
-          <b>Status:</b>
-          <%= @issue.status %>
-        </p>
-
-        <p>
-          <b>Flag:</b>
-          <%= (@issue.flag) %>
-        </p>
-      </div>
-      <div class="tab-pane" id="tab_issue_progress">
-        <p>Howdy, I'm in Section 2.</p>
-      </div>
-    </div> <!-- /tab-content -->
-  </div>
+<div class="row" >
+  <%= link_to 'Back', issues_path , class: 'span2 pull-right btn btn-block btn-inverse'%>
 </div>
+<br/>
+<div class="row">
+  <div class="span4 issue-about">
 
+    
+      <b><%=t 'issues.fullname' %> : </b>
+      <%= @issue.fullname %>
+    
+      <br/>
+    
+      <b><%=t 'issues.mobile' %> : </b>
+      <%= @issue.mobile %>
+    <br/>
 
+    
+      <b><%=t 'issues.email' %> : </b>
+      <%= @issue.email %>
+    <br/>
 
+    
+      <b><%=t 'issues.place' %> : </b>
+      <%= @issue.place %>
+    <br/>
 
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>
+    
+      <b><%=t 'issues.time' %> : </b>
+      <%= @issue.time %>
+    <br/>
+    
+      <b><%=t 'issues.status' %> : </b>
+      <%= t("issue.status.status_" + @issue.status.to_s) %>
+    
+    <br/>
+      <b><%=t 'issues.detail' %> : </b>
+      <%= @issue.detail %>
+    
 
-<script >
-$(".nav-tabs a").on('click', function (e) {
-  e.preventDefault();
-  $(this).tab("show");
-})
-</script>
+    
+
+  </div>
+  <div class="span7 detail-popovers" >
+    <div class="popover right">
+      <div class="arrow"></div>
+      <h3 class="popover-title"><%=t 'issue.progress.label' %></h3>
+      <div class="popover-content">
+        <p><%=t 'issue.progress.process' %></p>
+        <br/>
+      </div>
+    </div>
+</div>

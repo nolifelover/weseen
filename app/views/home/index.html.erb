@@ -9,18 +9,18 @@
 		</p>
 	</div>
 </div>
-
+<div class="row">
 <div class="span12 index_nav">
-	<%= link_to '<span class="fui-chat"></span>'.html_safe+' '+t(:have_issue),
+	<%= link_to '<i class="fui-chat"></i>'.html_safe+' '+t(:have_issue),
 	{:controller => 'issues', :action => 'new'},
-	:class => "offset2 span3 btn btn-huge btn-block btn-primary"
+	:class => "offset2 span3 btn btn-block btn-inverse"
 	%> 
-	<%= link_to '<span class="fui-list"></span>'.html_safe+' '+t(:all_issue),
+	<%= link_to '<i class="fui-list"></i>'.html_safe+' '+t(:all_issue),
 	{:controller => 'issues', :action => 'index'},
-	:class => "span3 btn btn-huge  btn-info"
+	:class => "span3 btn btn-info"
 	%>
 </div>
-
+</div>
 <hr/>
 <div>
 	<%= image_tag "/assets/icons/Clipboard@2x.png",:width=>"90",:height=>"90",:class => "pull-left" %>

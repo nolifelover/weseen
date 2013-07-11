@@ -9,7 +9,6 @@
     <th><%= t('issues.time') %></th>
     <th><%= t('issues.detail') %></th>
     <th><%= t('issues.status') %></th>
-    <th><%= t('issues.flag') %></th>
     <th></th>
   </tr>
 
@@ -20,7 +19,6 @@
     <td><%= issue.time %></td>
     <td><%= issue.detail %></td>
     <td><%= t("issue.status.status_" + issue.status.to_s) %></td>
-    <td><%= issue.flag %></td>
     <td><%= link_to t("show"), issue %></td>
     
   </tr>
