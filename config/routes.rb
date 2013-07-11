@@ -1,10 +1,13 @@
 WeSeen::Application.routes.draw do
   resources :issue_progesses
 
+  resources :issues do
+  	collection do
+  		get 'all'
+  	end
+  end
 
-  resources :issues
-
-
+  get 'about', to: "home#about"
   authenticated :user do
     root :to => 'home#index'
   end

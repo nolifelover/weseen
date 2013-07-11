@@ -1,0 +1,12 @@
+
+
+<div class="span12 index_nav">
+	<%= link_to '<span class="fui-chat"></span>'.html_safe+' '+t(:have_issue),
+	{:controller => 'issues', :action => 'new'},
+	:class => "offset2 span3 btn btn-huge btn-block btn-primary"
+	%> 
+	<%= link_to '<span class="fui-list"></span>'.html_safe+' '+t(:all_issue),
+	{:controller => 'issues', :action => 'index'},
+	:class => "span3 btn btn-huge  btn-info"
+	%>
+</div>

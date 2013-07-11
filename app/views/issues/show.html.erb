@@ -1,45 +1,72 @@
+<h1><%=t ('show') %></h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Fullname:</b>
-  <%= @issue.fullname %>
-</p>
+<div class="span12">
+  <div class="tabbable tabs-left">
+    <ul class="nav nav-tabs nav-append-content">
+      <li class="active"><a href="#tab_issue"><%= t('issue.label')%></a></li>
+      <li><a href="#tab_issue_progress"><%= t('issue.progress.label')%></a></li>
+    </ul> <!-- /tabs -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab_issue">
+        <p>I'm in Section 1.</p>
+        <p>
+          <b>Fullname:</b>
+          <%= @issue.fullname %>
+        </p>
 
-<p>
-  <b>Mobile:</b>
-  <%= @issue.mobile %>
-</p>
+        <p>
+          <b>Mobile:</b>
+          <%= @issue.mobile %>
+        </p>
 
-<p>
-  <b>Email:</b>
-  <%= @issue.email %>
-</p>
+        <p>
+          <b>Email:</b>
+          <%= @issue.email %>
+        </p>
 
-<p>
-  <b>Place:</b>
-  <%= @issue.place %>
-</p>
+        <p>
+          <b>Place:</b>
+          <%= @issue.place %>
+        </p>
 
-<p>
-  <b>Time:</b>
-  <%= @issue.time %>
-</p>
+        <p>
+          <b>Time:</b>
+          <%= @issue.time %>
+        </p>
 
-<p>
-  <b>Detail:</b>
-  <%= @issue.detail %>
-</p>
+        <p>
+          <b>Detail:</b>
+          <%= @issue.detail %>
+        </p>
 
-<p>
-  <b>Status:</b>
-  <%= @issue.status %>
-</p>
+        <p>
+          <b>Status:</b>
+          <%= @issue.status %>
+        </p>
 
-<p>
-  <b>Flag:</b>
-  <%= @issue.flag %>
-</p>
+        <p>
+          <b>Flag:</b>
+          <%= (@issue.flag) %>
+        </p>
+      </div>
+      <div class="tab-pane" id="tab_issue_progress">
+        <p>Howdy, I'm in Section 2.</p>
+      </div>
+    </div> <!-- /tab-content -->
+  </div>
+</div>
+
+
 
 
 <%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>
+
+<script >
+$(".nav-tabs a").on('click', function (e) {
+  e.preventDefault();
+  $(this).tab("show");
+})
+</script>

@@ -13,6 +13,19 @@ th:
   login: "เข้าสู่ระบบ"
   register: "สมัคร"
   five_lastest_issue: "แสดง 5 การแจ้งล่าสุด"
+  activerecord:
+    errors:
+      models:
+        issue:
+          attributes:
+            fullname:
+              blank: "ชื่อผู้แจ้งไม่สามารถเป็นช่องว่างได้"
+            place:
+              blank: "สถานที่ไม่สามารถเป็นช่องว่างได้"
+            time:
+              blank: "เวลาไม่สามารถเป็นช่องว่างได้"
+            detail:
+              blank: "รายละเอียดไม่สามารถเป็นช่องว่างได้"
   issues:
     fullname: 'ชิ่อผู้แจ้ง'
     mobile: 'เบอร์ติดต่อ'
@@ -22,21 +35,13 @@ th:
     detail: 'รายละเอียด'
     status: 'สถานะ'
     flag: 'FLAG'
-  simple_form:
-    labels:
-      issue:
-        fullname: 'ชิ่อผู้แจ้ง'
-        mobile: 'เบอร์ติดต่อ'
-        email: 'อีเมล์'
-        place: 'สถานที่'
-        time: 'วันเวลา'
-        detail: 'รายละเอียด'
-    hints:
-      defaults:
-        time: 'วันที่และเวลาที่เกิดเหตุการณ์ เช่น 23/07/2556 10:21'
-        place: 'สถานที่ที่เกิดเหตุการณ์ เช่น อาคาร 7 ห้อง 7701'
-  helpers:
-    submit:
-      issue:
-        create: "ยืนยัน"
-        update: "บันทึก"
+  issue:
+    label: "การแจ้ง"
+    progress:
+      label: "การดำเนินการ"
+    status:
+      status_: "แจ้งเข้าสู่ระบบ"
+      status_0: "แจ้งเข้าสู่ระบบ"
+      status_1: "เจ้าหน้าที่รับทราบ"
+      status_2: "ดำเนินการ"
+      status_10: "เสร็จสิ้น"

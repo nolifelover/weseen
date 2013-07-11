@@ -1,0 +1,43 @@
+th:
+  simple_form:
+    "yes": 'ใช่'
+    "no": 'ไม่ใช่'
+    required:
+      text: 'ต้องกรอก'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "การบันทึกไม่สมบูรณ์ กรุณาตรวจสอบข้อมูลของท่านอีกครั้ง"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    labels:
+      issue:
+        fullname: 'ชิ่อผู้แจ้ง'
+        mobile: 'เบอร์ติดต่อ'
+        email: 'อีเมล์'
+        place: 'สถานที่'
+        time: 'วันเวลา'
+        detail: 'รายละเอียด'
+    hints:
+      defaults:
+        time: 'วันที่และเวลาที่เกิดเหตุการณ์ เช่น 23/07/2556 10:21'
+        place: 'สถานที่ที่เกิดเหตุการณ์ เช่น อาคาร 7 ห้อง 7701'
+  helpers:
+    submit:
+      issue:
+        create: "ยืนยัน"
+        update: "บันทึก"
+

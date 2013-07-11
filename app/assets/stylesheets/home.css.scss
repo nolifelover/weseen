@@ -36,3 +36,25 @@ label{
 .btn{
   font-size:18px;
 }
+
+abbr[title], abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 0px dotted #999999;
+}
+
+.error .help-block{
+  margin-top:8px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.tabs-left > .nav-tabs {
+  background-color: #f3f4f5;
+  margin-right: 18px;
+  padding: 20px 0 150px 15px;
+  
+}

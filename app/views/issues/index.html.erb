@@ -1,6 +1,6 @@
 <div class="row">
 <div class="span12">
-<h1>Listing issues</h1>
+<h1><%=t :all_issue %></h1>
 
 <table class="table table-bordered table-striped table-hover">
   <tr>
@@ -19,7 +19,7 @@
     <td><%= issue.place %></td>
     <td><%= issue.time %></td>
     <td><%= issue.detail %></td>
-    <td><%= issue.status %></td>
+    <td><%= t("issue.status.status_" + issue.status.to_s) %></td>
     <td><%= issue.flag %></td>
     <td><%= link_to t("show"), issue %></td>
     
