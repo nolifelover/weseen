@@ -9,11 +9,11 @@
       <a href="#fakelink" class="brand fui-flat"></a>
       <div class="nav-collapse collapse" id="nav-collapse-01">
         <ul class="nav">
-          <li><%= link_to t(:home), {:controller => 'home', :action => 'index'}%></a></li>
-          <li><%= link_to t(:have_issue), {:controller => 'issues', :action => 'new'}%> </li>
-          <li><%= link_to t(:all_issue), {:controller => 'issues', :action => 'index'}%> </li>
+          <li><%= link_to t(:home), root_path%></a></li>
+          <li><%= link_to t(:have_issue), new_issue_path%> </li>
+          <li><%= link_to t(:all_issue), issues_path%> </li>
           
-          <li><%= link_to t(:about), {:controller => 'home', :action => 'index'}%> </li>
+          <li><%= link_to t(:about), about_path%> </li>
         </ul> <!-- /nav -->
        <!-- <ul class="nav pull-right">
           <li><a href="#fakelink"><%=t :login %></a></li>
