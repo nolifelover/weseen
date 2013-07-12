@@ -9,7 +9,9 @@
     <%= f.input :status %>
     <%= f.input :level %>
     <%= f.input :price %>
-    <%= f.input :check_at %>
+    <%= f.input :check_at , as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [ :month, :year]  %>
   </div>
 
   <div class="form-actions">

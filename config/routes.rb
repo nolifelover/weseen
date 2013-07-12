@@ -5,6 +5,9 @@ WeSeen::Application.routes.draw do
   	collection do
   		get 'all'
   	end
+    member do
+        get 'admin_edit'
+    end
   end
 
   get 'about', to: "home#about"
