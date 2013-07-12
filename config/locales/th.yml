@@ -12,6 +12,10 @@ th:
   all_issue: "การแจ้งทั้งหมด"
   login: "เข้าสู่ระบบ"
   register: "สมัคร"
+  email: 'อีเมล์'
+  password: 'รหัสผ่าน'
+  remember_me: "จำการเข้าใข้"
+  sign_in: "เข้าสู่ระบบ"
   five_lastest_issue: "แสดง 5 การแจ้งล่าสุด"
   activerecord:
     errors:

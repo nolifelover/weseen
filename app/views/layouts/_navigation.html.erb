@@ -15,11 +15,9 @@
           
           <li><%= link_to t(:about), about_path%> </li>
         </ul> <!-- /nav -->
-       <!-- <ul class="nav pull-right">
-          <li><a href="#fakelink"><%=t :login %></a></li>
-          <li><a href="#fakelink"><%=t :register %></a></li>
-          
-        </ul> -->
+        <ul class="nav pull-right">
+          <li><%= link_to t(:login), new_user_session_path%> </li>
+        </ul> 
       </form>
       </div><!--/.nav-collapse -->
     </div>
