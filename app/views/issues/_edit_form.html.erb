@@ -1,23 +1,24 @@
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs nav-append-content">
+    <li class="active"><a href="#tab_edit">Issue</a></li>
+    <li ><a href="#tab_progresses">Progresses</a></li>
+    <li ><a href="#tab_add_progress">Add Progress</a></li>
+  </ul> <!-- /tabs -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab_edit">
+      <%= render 'admin_edit' %>
+    </div>
+    <div class="tab-pane " id="tab_progresses">
+      <%= render 'progresses' %>
+    </div>
 
-<%= simple_form_for(@issue) do |f| %>
-  <%= f.error_notification %>
+    <div class="tab-pane " id="tab_add_progress">
+      <%= render 'progress_form' %>
+    </div>
 
-    <%= f.input :status , input_html: { class:'span3' },collection: [0,1,2,10],:label_method => lambda { |el| t "issue.status.status_#{el}" }%>
-    <%= f.input :fullname , input_html: { class:'span3' }%>
-    <%= f.input :mobile, input_html: { class:'span3' } %>
-    <%= f.input :email, input_html: { class:'span3' } %>
-    <%= f.input :place , input_html: { class:'span3' } %>
-    <%= f.input :time %>
-    <%= f.input :detail, as: :text, input_html: { class:'span5', rows: 10,cols: 20 } %>
-    
-  
-
-  <div class="form-actions text-right">
-    <%= f.button :submit, class: 'span2 btn-inverse' %>
   </div>
+</div>
 
-
-<% end %>
 
 <script type="text/javascript">
     // Custom Selects
@@ -25,4 +26,4 @@
     $("select").selectpicker({style: 'btn-info'});
     
 
-</script>
+    </script>

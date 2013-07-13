@@ -8,7 +8,7 @@ class Issue < ActiveRecord::Base
   STATUS_DONE = 10
 
   attr_accessible :detail, :email, :flag, :fullname, :mobile, :place, :status, :time
-  has_many :issue_progress, :dependent => :destroy
+  has_many :issue_progesses, :dependent => :destroy
 
   validates_presence_of :detail
   validates_presence_of :fullname

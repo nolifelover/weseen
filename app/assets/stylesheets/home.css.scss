@@ -87,8 +87,11 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   border-radius: 6px;
 }
 
-.detail-popovers .popover {
+.detail-popovers{
+  margin-bottom:10px;
+}
 
+.detail-popovers .popover {
   display: block;
   margin: 0 13px 0 -3px;
   position: relative;
@@ -99,6 +102,15 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .detail-popovers .popover-title{
   background-color: #3498DB;
+}
+
+.detail-popovers .popover-title a{
+  float:right;
+  text-align:right;
+}
+
+.detail-popovers .popover-content {
+  min-height:50px;
 }
 
 .detail-popovers .btn {
@@ -112,3 +124,4 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 margin-left: 0px;
 margin-bottom: 0px;
 }
+

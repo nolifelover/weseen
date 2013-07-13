@@ -7,6 +7,7 @@ WeSeen::Application.routes.draw do
   	end
     member do
         get 'admin_edit'
+        post 'add_progress'
     end
   end
 

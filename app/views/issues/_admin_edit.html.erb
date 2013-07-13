@@ -1,0 +1,16 @@
+      <%= simple_form_for(@issue) do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :status , input_html: { class:'span3' },collection: [0,1,2,10],:label_method => lambda { |el| t "issue.status.status_#{el}" }%>
+      <%= f.input :fullname , input_html: { class:'span3' }%>
+      <%= f.input :mobile, input_html: { class:'span3' } %>
+      <%= f.input :email, input_html: { class:'span3' } %>
+      <%= f.input :place , input_html: { class:'span3' } %>
+      <%= f.input :time %>
+      <%= f.input :detail, as: :text, input_html: { class:'span5', rows: 10,cols: 20 } %>
+
+      <div class="form-actions text-right">
+        <%= f.button :submit, class: 'span2 btn-inverse' %>
+      </div>
+
+      <% end %>
