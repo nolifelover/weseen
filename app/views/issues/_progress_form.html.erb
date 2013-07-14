@@ -4,12 +4,12 @@
   <div class="form-inputs">
     
     <%= f.input :name %>
-    <%= f.input :price %>
+    <%= f.input :price , input_html: { value: '0' }%>
     <%= f.input :remark, as: :text, input_html: { class:'span5', rows: 10,cols: 20 } %>
    
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'span2 btn-inverse'  %>
   </div>
 <% end %>

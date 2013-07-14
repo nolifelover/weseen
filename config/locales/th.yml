@@ -15,6 +15,7 @@ th:
   email: 'อีเมล์'
   password: 'รหัสผ่าน'
   remember_me: "จำการเข้าใข้"
+  progress: "การดำเนินการ"
   sign_in: "เข้าสู่ระบบ"
   five_lastest_issue: "แสดง 5 การแจ้งล่าสุด"
   activerecord:
@@ -41,9 +42,13 @@ th:
     flag: 'FLAG'
   issue:
     label: "การแจ้ง"
+    edit: "ข้อมูลการแจ้ง"
+    create:
+      success: "การเพิ่มข้อมูลเสร็จสมบูรณ์"
     progress:
       label: "การดำเนินการ"
       process: "อยู่ในขั้นตอนการดำเนินการ"
+      add: "เพิ่มการดำเนินการ"
     status:
       status_: "แจ้งเข้าสู่ระบบ"
       status_0: "แจ้งเข้าสู่ระบบ"

@@ -70,7 +70,7 @@ class IssuesController < ApplicationController
 
     respond_to do |format|
       if @issue.save
-        format.html { redirect_to @issue, notice: 'Issue was successfully created.' }
+        format.html { redirect_to @issue, notice: t('issue.create.success') }
         format.json { render json: @issue, status: :created, location: @issue }
       else
         format.html { render action: "new" }

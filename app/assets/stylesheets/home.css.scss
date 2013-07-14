@@ -111,8 +111,16 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .detail-popovers .popover-content {
   min-height:50px;
+  padding-bottom:10px;
 }
-
+.detail-popovers .popover-content p{
+  margin:0px 0px 0px 0px;
+}
+.detail-popovers hr {
+margin: 10px 3px;
+border: 0;
+border-top: 1px solid #BDC3C7;
+}
 .detail-popovers .btn {
   text-align: right;
   -webkit-border-radius: 0 0 6px 6px;
@@ -123,5 +131,12 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .btn-group.select {
 margin-left: 0px;
 margin-bottom: 0px;
+}
+.progress-header{
+  font-size:16px;
+}
+
+.issue .nav-tabs > li > a {
+  font-weight: normal;
 }
 

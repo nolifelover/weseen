@@ -12,4 +12,9 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def issue_status_render resource
+    puts resource 
+    return "#{t('issue.status.status_'+resource.to_s)}"
+  end
+
 end

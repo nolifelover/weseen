@@ -5,7 +5,7 @@
 </div>
 <br/>
 <div class="row">
-  <div class="span4 issue-about">
+  <div class="span4 issue-about" style="height:100%">
 
     
       <b><%=t 'issues.fullname' %> : </b>
@@ -43,13 +43,25 @@
     
 
   </div>
-  <div class="span7 detail-popovers" >
+
+
+<div class="span7 detail-popovers" >
     <div class="popover right">
       <div class="arrow"></div>
-      <h3 class="popover-title"><%=t 'issue.progress.label' %></h3>
+      <h3 class="popover-title">
+        <%=t :progress %>
+      </h3>
       <div class="popover-content">
-        <p><%=t 'issue.progress.process' %></p>
-        <br/>
+        <% @issue.issue_progesses.each_with_index do |issue_progess,index| %>
+        <% if index != 0 %>
+          <hr/>
+        <% end %>
+        <b><%= issue_progess.name %></b>
+        <p><%= issue_progess.remark.html_safe %></p>
+
+        <% end %>
       </div>
     </div>
+</div>
+
 </div>
