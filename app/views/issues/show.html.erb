@@ -33,7 +33,7 @@
     <br/>
     
       <b><%=t 'issues.status' %> : </b>
-      <%= t("issue.status.status_" + @issue.status.to_s) %>
+      <%= issue_status_render @issue.status %>
     
     <br/>
       <b><%=t 'issues.detail' %> : </b>

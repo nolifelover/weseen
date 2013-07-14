@@ -14,7 +14,18 @@ module ApplicationHelper
 
   def issue_status_render resource
     puts resource 
-    return "#{t('issue.status.status_'+resource.to_s)}"
+    label_name = ""
+    case resource 
+    when 0
+      label_name = ""
+    when 1
+      label_name = "label-warning"
+    when 2
+      label_name = "label-info"
+    when 10
+      label_name = "label-success"
+    end
+    return "<span class='label #{label_name}'>#{t('issue.status.status_'+resource.to_s)}</span>".html_safe
   end
 
 end
