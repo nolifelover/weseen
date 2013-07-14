@@ -25,7 +25,7 @@ module ApplicationHelper
     when 10
       label_name = "label-success"
     end
-    return "<span class='label #{label_name}'>#{t('issue.status.status_'+resource.to_s)}</span>".html_safe
+    return "<span class='label  #{label_name}'>#{t('issue.status.status_'+resource.to_s)}</span>".html_safe
   end
 
 end
