@@ -1,8 +1,8 @@
-<%= simple_form_for(@issue_progess, :url => add_progress_issue_path) do |f| %>
+<%= simple_form_for(@issue_progess, :url => admin_create_progress_path, :method => :put) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    
+    <%= f.input :issue_id, :as => :hidden, :input_html => { :value => @issue.id } %>
     <%= f.input :name %>
     <%= f.input :price , input_html: { value: '0' }%>
     <%= f.input :remark, as: :text, input_html: { class:'span5', rows: 10,cols: 20 } %>

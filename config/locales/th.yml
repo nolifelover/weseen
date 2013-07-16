@@ -11,6 +11,7 @@ th:
   new_issue: "แจ้งปัญหา"
   all_issue: "การแจ้งทั้งหมด"
   login: "เข้าสู่ระบบ"
+  logout: ออกจากระบบ
   register: "สมัคร"
   email: 'อีเมล์'
   password: 'รหัสผ่าน'
@@ -18,6 +19,16 @@ th:
   progress: "การดำเนินการ"
   sign_in: "เข้าสู่ระบบ"
   five_lastest_issue: "แสดง 5 การแจ้งล่าสุด"
+  common:
+    edit: แก้ไข
+    delete: ลบ
+    update: ปรับปรุง
+    show: แสดง
+    close: ปิด
+  admin:
+    issues:
+      index:
+        edit: แก้ไข
   activerecord:
     errors:
       models:
@@ -31,6 +42,16 @@ th:
               blank: "เวลาไม่สามารถเป็นช่องว่างได้"
             detail:
               blank: "รายละเอียดไม่สามารถเป็นช่องว่างได้"
+  users:
+    all: ผู้ใช้งานทั้งหมด
+    username: ชื่อผู้ใช้งาน
+    email: อีเมล์
+    role: สิทธิการใช้งาน
+    registered: ลงทะเบียนเมื่อ
+    change_role: เปลี่ยนแปลงสิทธิ
+  roles:
+    label: สิทธิการใช้งาน
+    delete: ลบ
   issues:
     fullname: 'ผู้แจ้ง'
     mobile: 'เบอร์ติดต่อ'

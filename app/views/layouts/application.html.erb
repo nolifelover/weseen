@@ -14,8 +14,15 @@
 
     <div id="main" role="main">
       <div class="container">
-        <%= render 'layouts/navigation' %>
-        
+        <% if user_signed_in? %>
+          <% if current_user.has_role? :admin %>
+              <%= render 'layouts/admin_navigation' %>
+          <% else %>
+              <%= render 'layouts/user_navigation' %>
+          <% end %>
+        <% else %>
+          <%= render 'layouts/navigation' %>
+        <% end %>    
         <div class="content">
            <div class="row">
             <div class="span12">

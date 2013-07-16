@@ -1,0 +1,33 @@
+
+<div class="row">
+<div class="span12">
+<h1><%=t :all_issue %></h1>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th><%= t('issues.fullname') %></th>
+    <th><%= t('issues.place') %></th>
+    <th><%= t('issues.time') %></th>
+    <th><%= t('issues.detail') %></th>
+    <th><%= t('issues.status') %></th>
+    <th></th>
+  </tr>
+
+<% @issues.each do |issue| %>
+  <tr>
+    <td><%= issue.fullname %></td>
+    <td><%= issue.place %></td>
+    <td><%= issue.time %></td>
+    <td><%= issue.detail %></td>
+    <td><%= issue_status_render issue.status %></td>
+    <td><%= link_to t("common.edit"), admin_edit_issue_path(issue) %> | <%= link_to t("common.delete"), admin_delete_issue_path(issue), method: :delete%></td>
+    
+  </tr>
+<% end %>
+</div>
+
+<div class="row" style="margin-bottom:15px;">
+<div class="span12">
+<%= link_to t(:have_issue), new_issue_path, class: 'span2 btn btn-inverse pull-right' %>
+</div>
+</div>

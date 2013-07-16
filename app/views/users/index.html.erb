@@ -1,13 +1,14 @@
-<h3>Users</h3>
-<div class="span8">
-<table class="table table-condensed">
+<div class="row">
+<div class="span12">
+<h1><%=t "users.all" %></h1>
+
+<table class="table table-bordered table-striped table-hover">
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Registered</th>
-      <th>Role</th>
-      <th></th>
+      <th><%= t('users.username') %></th>
+      <th><%= t('users.email') %></th>
+      <th><%= t('users.registered') %></th>
+      <th><%= t('users.role') %></th>
       <th></th>
     </tr>
   </thead>
@@ -19,10 +20,10 @@
       <td><%= user.created_at.to_date %></td>
       <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
       <td>
-        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
+        <a data-toggle="modal" href="#role-options-<%= user.id %>" ><%=t("users.change_role")%></a>
+          <%= link_to(t("user.delete"), user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete) unless user == current_user %>
         <%= render user %>
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
     </tr>
   <% end %>
   </tbody>

@@ -1,4 +1,4 @@
-      <%= simple_form_for(@issue) do |f| %>
+      <%= simple_form_for(@issue, :url => admin_update_issue_path, :method => :put) do |f| %>
       <%= f.error_notification %>
 
       <%= f.input :status , input_html: { class:'span3' },collection: [0,1,2,10],:label_method => lambda { |el| t "issue.status.status_#{el}" }%>
