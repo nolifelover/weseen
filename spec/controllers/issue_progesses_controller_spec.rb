@@ -18,10 +18,10 @@ require 'spec_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-describe IssueProgessesController do
+describe IssueProgressesController do
 
   # This should return the minimal set of attributes required to create a valid
-  # IssueProgess. As you add validations to IssueProgess, be sure to
+  # IssueProgress. As you add validations to IssueProgress, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
     { "issue" => "" }
@@ -29,74 +29,74 @@ describe IssueProgessesController do
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # IssueProgessesController. Be sure to keep this updated too.
+  # IssueProgressesController. Be sure to keep this updated too.
   def valid_session
     {}
   end
 
   describe "GET index" do
-    it "assigns all issue_progesses as @issue_progesses" do
-      issue_progess = IssueProgess.create! valid_attributes
+    it "assigns all issue_progresses as @issue_progresses" do
+      issue_progress = IssueProgress.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:issue_progesses).should eq([issue_progess])
+      assigns(:issue_progresses).should eq([issue_progress])
     end
   end
 
   describe "GET show" do
-    it "assigns the requested issue_progess as @issue_progess" do
-      issue_progess = IssueProgess.create! valid_attributes
-      get :show, {:id => issue_progess.to_param}, valid_session
-      assigns(:issue_progess).should eq(issue_progess)
+    it "assigns the requested issue_progress as @issue_progress" do
+      issue_progress = IssueProgress.create! valid_attributes
+      get :show, {:id => issue_progress.to_param}, valid_session
+      assigns(:issue_progress).should eq(issue_progress)
     end
   end
 
   describe "GET new" do
-    it "assigns a new issue_progess as @issue_progess" do
+    it "assigns a new issue_progress as @issue_progress" do
       get :new, {}, valid_session
-      assigns(:issue_progess).should be_a_new(IssueProgess)
+      assigns(:issue_progress).should be_a_new(IssueProgress)
     end
   end
 
   describe "GET edit" do
-    it "assigns the requested issue_progess as @issue_progess" do
-      issue_progess = IssueProgess.create! valid_attributes
-      get :edit, {:id => issue_progess.to_param}, valid_session
-      assigns(:issue_progess).should eq(issue_progess)
+    it "assigns the requested issue_progress as @issue_progress" do
+      issue_progress = IssueProgress.create! valid_attributes
+      get :edit, {:id => issue_progress.to_param}, valid_session
+      assigns(:issue_progress).should eq(issue_progress)
     end
   end
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new IssueProgess" do
+      it "creates a new IssueProgress" do
         expect {
-          post :create, {:issue_progess => valid_attributes}, valid_session
-        }.to change(IssueProgess, :count).by(1)
+          post :create, {:issue_progress => valid_attributes}, valid_session
+        }.to change(IssueProgress, :count).by(1)
       end
 
-      it "assigns a newly created issue_progess as @issue_progess" do
-        post :create, {:issue_progess => valid_attributes}, valid_session
-        assigns(:issue_progess).should be_a(IssueProgess)
-        assigns(:issue_progess).should be_persisted
+      it "assigns a newly created issue_progress as @issue_progress" do
+        post :create, {:issue_progress => valid_attributes}, valid_session
+        assigns(:issue_progress).should be_a(IssueProgress)
+        assigns(:issue_progress).should be_persisted
       end
 
-      it "redirects to the created issue_progess" do
-        post :create, {:issue_progess => valid_attributes}, valid_session
-        response.should redirect_to(IssueProgess.last)
+      it "redirects to the created issue_progress" do
+        post :create, {:issue_progress => valid_attributes}, valid_session
+        response.should redirect_to(IssueProgress.last)
       end
     end
 
     describe "with invalid params" do
-      it "assigns a newly created but unsaved issue_progess as @issue_progess" do
+      it "assigns a newly created but unsaved issue_progress as @issue_progress" do
         # Trigger the behavior that occurs when invalid params are submitted
-        IssueProgess.any_instance.stub(:save).and_return(false)
-        post :create, {:issue_progess => { "issue" => "invalid value" }}, valid_session
-        assigns(:issue_progess).should be_a_new(IssueProgess)
+        IssueProgress.any_instance.stub(:save).and_return(false)
+        post :create, {:issue_progress => { "issue" => "invalid value" }}, valid_session
+        assigns(:issue_progress).should be_a_new(IssueProgress)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        IssueProgess.any_instance.stub(:save).and_return(false)
-        post :create, {:issue_progess => { "issue" => "invalid value" }}, valid_session
+        IssueProgress.any_instance.stub(:save).and_return(false)
+        post :create, {:issue_progress => { "issue" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -104,60 +104,60 @@ describe IssueProgessesController do
 
   describe "PUT update" do
     describe "with valid params" do
-      it "updates the requested issue_progess" do
-        issue_progess = IssueProgess.create! valid_attributes
-        # Assuming there are no other issue_progesses in the database, this
-        # specifies that the IssueProgess created on the previous line
+      it "updates the requested issue_progress" do
+        issue_progress = IssueProgress.create! valid_attributes
+        # Assuming there are no other issue_progresses in the database, this
+        # specifies that the IssueProgress created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        IssueProgess.any_instance.should_receive(:update_attributes).with({ "issue" => "" })
-        put :update, {:id => issue_progess.to_param, :issue_progess => { "issue" => "" }}, valid_session
+        IssueProgress.any_instance.should_receive(:update_attributes).with({ "issue" => "" })
+        put :update, {:id => issue_progress.to_param, :issue_progress => { "issue" => "" }}, valid_session
       end
 
-      it "assigns the requested issue_progess as @issue_progess" do
-        issue_progess = IssueProgess.create! valid_attributes
-        put :update, {:id => issue_progess.to_param, :issue_progess => valid_attributes}, valid_session
-        assigns(:issue_progess).should eq(issue_progess)
+      it "assigns the requested issue_progress as @issue_progress" do
+        issue_progress = IssueProgress.create! valid_attributes
+        put :update, {:id => issue_progress.to_param, :issue_progress => valid_attributes}, valid_session
+        assigns(:issue_progress).should eq(issue_progress)
       end
 
-      it "redirects to the issue_progess" do
-        issue_progess = IssueProgess.create! valid_attributes
-        put :update, {:id => issue_progess.to_param, :issue_progess => valid_attributes}, valid_session
-        response.should redirect_to(issue_progess)
+      it "redirects to the issue_progress" do
+        issue_progress = IssueProgress.create! valid_attributes
+        put :update, {:id => issue_progress.to_param, :issue_progress => valid_attributes}, valid_session
+        response.should redirect_to(issue_progress)
       end
     end
 
     describe "with invalid params" do
-      it "assigns the issue_progess as @issue_progess" do
-        issue_progess = IssueProgess.create! valid_attributes
+      it "assigns the issue_progress as @issue_progress" do
+        issue_progress = IssueProgress.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        IssueProgess.any_instance.stub(:save).and_return(false)
-        put :update, {:id => issue_progess.to_param, :issue_progess => { "issue" => "invalid value" }}, valid_session
-        assigns(:issue_progess).should eq(issue_progess)
+        IssueProgress.any_instance.stub(:save).and_return(false)
+        put :update, {:id => issue_progress.to_param, :issue_progress => { "issue" => "invalid value" }}, valid_session
+        assigns(:issue_progress).should eq(issue_progress)
       end
 
       it "re-renders the 'edit' template" do
-        issue_progess = IssueProgess.create! valid_attributes
+        issue_progress = IssueProgress.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        IssueProgess.any_instance.stub(:save).and_return(false)
-        put :update, {:id => issue_progess.to_param, :issue_progess => { "issue" => "invalid value" }}, valid_session
+        IssueProgress.any_instance.stub(:save).and_return(false)
+        put :update, {:id => issue_progress.to_param, :issue_progress => { "issue" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
   end
 
   describe "DELETE destroy" do
-    it "destroys the requested issue_progess" do
-      issue_progess = IssueProgess.create! valid_attributes
+    it "destroys the requested issue_progress" do
+      issue_progress = IssueProgress.create! valid_attributes
       expect {
-        delete :destroy, {:id => issue_progess.to_param}, valid_session
-      }.to change(IssueProgess, :count).by(-1)
+        delete :destroy, {:id => issue_progress.to_param}, valid_session
+      }.to change(IssueProgress, :count).by(-1)
     end
 
-    it "redirects to the issue_progesses list" do
-      issue_progess = IssueProgess.create! valid_attributes
-      delete :destroy, {:id => issue_progess.to_param}, valid_session
-      response.should redirect_to(issue_progesses_url)
+    it "redirects to the issue_progresses list" do
+      issue_progress = IssueProgress.create! valid_attributes
+      delete :destroy, {:id => issue_progress.to_param}, valid_session
+      response.should redirect_to(issue_progresses_url)
     end
   end
 

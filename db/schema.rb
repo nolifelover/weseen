@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130705190753) do
 
-  create_table "issue_progesses", :force => true do |t|
+  create_table "issue_progresses", :force => true do |t|
     t.integer  "issue_id"
     t.integer  "user_id"
     t.string   "name"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20130705190753) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "issue_progesses", ["issue_id"], :name => "index_issue_progesses_on_issue_id"
-  add_index "issue_progesses", ["user_id"], :name => "index_issue_progesses_on_user_id"
+  add_index "issue_progresses", ["issue_id"], :name => "index_issue_progresses_on_issue_id"
+  add_index "issue_progresses", ["user_id"], :name => "index_issue_progresses_on_user_id"
 
   create_table "issues", :force => true do |t|
     t.string   "fullname"

@@ -12,7 +12,7 @@ class Admin::IssuesController < AdminController
 	# GET /admin/issues/edit/:id
   def edit
     @issue = Issue.find(params[:id])
-    @issue_progess = IssueProgess.new
+    @issue_progress = IssueProgress.new
   end
 
   # PUT /admin/issues/1
@@ -43,14 +43,14 @@ class Admin::IssuesController < AdminController
 
   # POST /admin/issues/create/progress
   def create_progress
-    @issue = Issue.find(params[:issue_progess][:issue_id])
-		params[:issue_progess].delete :issue_id
-    @issue_progess = IssueProgess.new(params[:issue_progess])
-    @issue.issue_progesses << @issue_progess
+    @issue = Issue.find(params[:issue_progress][:issue_id])
+		params[:issue_progress].delete :issue_id
+    @issue_progress = IssueProgress.new(params[:issue_progress])
+    @issue.issue_progresses << @issue_progress
     respond_to do |format|
-      if @issue_progess.save && @issue.save
+      if @issue_progress.save && @issue.save
         format.html { redirect_to admin_edit_issue_path(@issue) , notice: 'Issue progess was successfully created.' }
-        format.json { render json: @issue_progess, status: :created, location: @issue_progess }
+        format.json { render json: @issue_progress, status: :created, location: @issue_progress }
       else
         format.html { redirect_to @issue, notice: 'Issue progess was successfully created.' }
         format.json { render json: @issue.errors, status: :unprocessable_entity }
@@ -60,9 +60,9 @@ class Admin::IssuesController < AdminController
 
   # DELETE /admin/issues/delete/progress/1
   def destroy_progress
-    @issue_progess = IssueProgess.find(params[:id])
-    @issue = @issue_progess.issue
-    @issue_progess.destroy
+    @issue_progress = IssueProgress.find(params[:id])
+    @issue = @issue_progress.issue
+    @issue_progress.destroy
 
     respond_to do |format|
       format.html { redirect_to admin_edit_issue_path(@issue) }

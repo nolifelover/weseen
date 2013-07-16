@@ -1,5 +1,5 @@
 WeSeen::Application.routes.draw do
-  resources :issues, :only => [:index, :new, :show]
+  resources :issues, :only => [:index, :new, :show, :create]
 
   get 'about', to: "home#about"
   authenticated :user do

@@ -1,16 +1,16 @@
 
 <%= image_tag "/assets/icons/Dude@2x.png",:width=>"90",:height=>"90",:class => "pull-right" %>
 
-<% @issue.issue_progesses.each do |issue_progess| %>
+<% @issue.issue_progresses.each do |issue_progress| %>
 <div class="span9 detail-popovers" >
     <div class="popover left">
       <div class="arrow"></div>
       <h3 class="popover-title">
-        <%= issue_progess.name %>
-        <%= link_to '', admin_delete_progress_path(issue_progess), method: :delete, data: { confirm: 'Are you sure?' },class: "text-right close fui-cross" %>
+        <%= issue_progress.name %>
+        <%= link_to '', admin_delete_progress_path(issue_progress), method: :delete, data: { confirm: 'Are you sure?' },class: "text-right close fui-cross" %>
       </h3>
       <div class="popover-content">
-        <p><%= issue_progess.remark %></p>
+        <p><%= issue_progress.remark %></p>
         
       </div>
     </div>

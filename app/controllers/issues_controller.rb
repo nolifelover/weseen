@@ -31,4 +31,20 @@ class IssuesController < ApplicationController
       format.json { render json: @issue }
     end
   end
+
+  # POST /issues
+  # POST /issues.json
+  def create
+    @issue = Issue.new(params[:issue])
+
+    respond_to do |format|
+      if @issue.save
+        format.html { redirect_to @issue, notice: t('issue.create.success') }
+        format.json { render json: @issue, status: :created, location: @issue }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @issue.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 end

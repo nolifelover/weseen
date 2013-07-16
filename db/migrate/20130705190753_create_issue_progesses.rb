@@ -1,6 +1,6 @@
-class CreateIssueProgesses < ActiveRecord::Migration
+class CreateIssueProgresses < ActiveRecord::Migration
   def change
-    create_table :issue_progesses do |t|
+    create_table :issue_progresses do |t|
       t.references :issue
       t.references :user
       t.string :name
@@ -12,7 +12,7 @@ class CreateIssueProgesses < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :issue_progesses, :issue_id
-    add_index :issue_progesses, :user_id
+    add_index :issue_progresses, :issue_id
+    add_index :issue_progresses, :user_id
   end
 end

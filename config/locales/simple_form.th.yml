@@ -36,7 +36,7 @@ th:
         email: 'อีเมล์'
         password: 'รหัสผ่าน'
         remember_me: 'จำการเข้าระบบ'
-      issue_progess:
+      issue_progress:
         name: 'หัวข้อ'
         price: 'งบที่ใช้'
         remark: 'คำอธิบาย'
@@ -44,13 +44,13 @@ th:
       defaults:
         time: 'วันที่และเวลาที่เกิดเหตุการณ์ เช่น 23/07/2556 10:21'
         place: 'สถานที่ที่เกิดเหตุการณ์ เช่น อาคาร 7 ห้อง 7701'
-      issue_progess:
+      issue_progress:
         price: "กรอกเป็นตัวเลข เช่น 12600 เป็นต้น หากไม่มีค่าใช้จ่ายให้กรอก เป็น 0"
   helpers:
     submit:
       issue:
         create: "ยืนยัน"
         update: "บันทึก"
-      issue_progess:
+      issue_progress:
         create: "เพิ่มข้อมูล"
 

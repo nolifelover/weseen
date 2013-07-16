@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :issue_progess do
+  factory :issue_progress do
     issue nil
     user nil
     name "MyString"

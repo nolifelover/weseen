@@ -52,12 +52,12 @@
         <%=t :progress %>
       </h3>
       <div class="popover-content">
-        <% @issue.issue_progesses.each_with_index do |issue_progess,index| %>
+        <% @issue.issue_progresses.each_with_index do |issue_progress,index| %>
         <% if index != 0 %>
           <hr/>
         <% end %>
-        <b><%= issue_progess.name %></b>
-        <p><%= issue_progess.remark.html_safe %></p>
+        <b><%= issue_progress.name %></b>
+        <p><%= issue_progress.remark.html_safe %></p>
 
         <% end %>
       </div>
